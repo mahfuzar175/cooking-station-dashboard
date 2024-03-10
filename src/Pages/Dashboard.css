@@ -1,0 +1,9 @@
+.custom-margin {
+    margin-top: 65px; /* Adjust the value as needed */
+  }
+
+  .left-background{
+    background-color: rgb(4, 4, 24);
+    position: fixed;
+    width: 20%;
+  }
