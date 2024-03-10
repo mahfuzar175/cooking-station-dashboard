@@ -1,5 +1,7 @@
 import { Nav } from 'react-bootstrap';
 import '../Pages/Dashboard.css'
+import { FaHome } from "react-icons/fa";
+import { RxDashboard } from "react-icons/rx";
 
 const Dashboard = () => {
     return (
@@ -7,8 +9,8 @@ const Dashboard = () => {
             <div className='min-vh-100 left-background text-white d-lg-block d-none text-left px-5 py-3'>
                 <h2>Hi!</h2>
                 <p>Mahfuzar Rahman Tarek</p>
-                <Nav.Link className='mt-5' href="#action1">Dashboard</Nav.Link>
-                  <Nav.Link className='mt-2' href="#action2">Home</Nav.Link>
+                <Nav.Link className='mt-5' href="#action1"><RxDashboard className='mb-1' /><span className='mx-2'>Dashboard</span></Nav.Link>
+                  <Nav.Link className='mt-2' href="#action2"><FaHome className='mb-1'/><span className='mx-2'>Home</span></Nav.Link>
                   <Nav.Link className='mt-2' href="#action3">Link</Nav.Link>
 
             </div>

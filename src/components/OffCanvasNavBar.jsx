@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { FaHome } from "react-icons/fa";
+import { RxDashboard } from "react-icons/rx";
 
 const OffCanvasNavBar = () => {
   return (
@@ -30,9 +32,9 @@ const OffCanvasNavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body className="d-lg-none">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link className="fw-bolder" href="#action1">Dashboard</Nav.Link>
-                  <Nav.Link  className="fw-bolder" href="#action2">Home</Nav.Link>
-                  <Nav.Link  className="fw-bolder" href="#action3">Link</Nav.Link>
+                <Nav.Link className='mt-5' href="#action1"><RxDashboard className='mb-1' /><span className='mx-2'>Dashboard</span></Nav.Link>
+                  <Nav.Link className='mt-2' href="#action2"><FaHome className='mb-1'/><span className='mx-2'>Home</span></Nav.Link>
+                  <Nav.Link className='mt-2' href="#action3">Link</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
