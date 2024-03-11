@@ -1,11 +1,14 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 
 const data = [
-  { name: "Fill", value: 70, level: "Fill", color: "#FF6384" },
-  { name: "Available", value: 30, level: "Available", color: "#36A2EB" },
+  { name: "Hot Dog", value: 35, level: "Hot Dog", color: "#FF6384" },
+  { name: "Burger", value: 21, level: "Burger", color: "#36A2EB" },
+  { name: "Fried Chicken", value: 25, level: "Fried Chicken", color: "#0b9e2b" },
+  { name: "Nachose", value: 19, level: "Nachose", color: "#eb2337" },
+  { name: "Nachose", value: 19, level: "Canceller", color: "#0d26b5" },
 ];
 
-const PieChartComponent = () => (
+const BestSellingItems = () => (
   <ResponsiveContainer width="100%" height={300}>
     <PieChart>
       <Pie
@@ -13,8 +16,9 @@ const PieChartComponent = () => (
         dataKey="value"
         cx="50%"
         cy="50%"
+        innerRadius={40}
         outerRadius={80}
-        fill="#8884d8"
+        fill="#82ca9d"
         label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
       >
         {data.map((entry, index) => (
@@ -31,4 +35,4 @@ const PieChartComponent = () => (
   </ResponsiveContainer>
 );
 
-export default PieChartComponent;
+export default BestSellingItems;

@@ -52,17 +52,18 @@ const OffCanvasNavBar = ({ onTabClick }) => {
               </Offcanvas.Header>
               <Offcanvas.Body className="d-lg-none">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link onClick={() => onTabClick("home")}>
+                    <FaHome className="mt5-1" />
+                    <span className="mx-2">Home</span>
+                  </Nav.Link>
                   <Nav.Link
-                    className="mt-5"
+                    className="mb-1"
                     onClick={() => onTabClick("dashboard")}
                   >
                     <RxDashboard className="mb-1" />
                     <span className="mx-2">Dashboard</span>
                   </Nav.Link>
-                  <Nav.Link onClick={() => onTabClick("home")}>
-                    <FaHome className="mb-1" />
-                    <span className="mx-2">Home</span>
-                  </Nav.Link>
+
                   <Nav.Link href="#logout">
                     <GrLogout className="mb-1" />
                     <span className="mx-2">Sign out</span>

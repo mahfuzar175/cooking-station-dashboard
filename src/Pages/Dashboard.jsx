@@ -10,6 +10,9 @@ import { FaBowlFood } from "react-icons/fa6";
 import OffCanvasNavBar from "../components/OffCanvasNavBar";
 import { GrLogout } from "react-icons/gr";
 import PieChartComponent from "../components/PieChartComponent";
+import OrderderedByStatus from "../components/OrderedByStatus";
+import BestSellingItems from "../components/BestSellingItems";
+import OrderByPaymentTypeAndSource from "../components/OrderByPaymentTypeAndSource";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -26,19 +29,20 @@ const Dashboard = () => {
           <h2>Hi!</h2>
           <p>Mahfuzar Rahman Tarek</p>
           <Nav.Link
-            className={`mt-5 ${activeTab === "dashboard" ? "active" : ""}`}
-            onClick={() => handleTabClick("dashboard")}
-          >
-            <RxDashboard className="mb-1" />
-            <span className="mx-2">Dashboard</span>
-          </Nav.Link>
-          <Nav.Link
-            className={`mt-2 ${activeTab === "home" ? "active" : ""}`}
+            className={`mt-5 ${activeTab === "home" ? "active" : ""}`}
             onClick={() => handleTabClick("home")}
           >
             <FaHome className="mb-1" />
             <span className="mx-2">Home</span>
           </Nav.Link>
+          <Nav.Link
+            className={`mt-2 ${activeTab === "dashboard" ? "active" : ""}`}
+            onClick={() => handleTabClick("dashboard")}
+          >
+            <RxDashboard className="mb-1" />
+            <span className="mx-2">Dashboard</span>
+          </Nav.Link>
+
           <Nav.Link className="mt-2" href="#logout">
             <GrLogout className="mb-1" />
             <span className="mx-2">Sign out</span>
@@ -58,30 +62,28 @@ const Dashboard = () => {
                   <div className="mt-4 d-flex">
                     <h2 className="fs-5 ">Total Meals: </h2>
                     <p className="fs-5 fw-bold mx-2">54</p>
-                    
                   </div>
                   <div>
-                  <Button variant="success">My Meal Appoinment</Button>{" "}
+                    <Button variant="primary">My Meal Appoinment</Button>{" "}
                   </div>
                   <div className="mt-5">
-                  <Button variant="success">Emergency Guest Meal</Button>{" "}
+                    <Button variant="primary">Emergency Guest Meal</Button>{" "}
                   </div>
                   <p className="text-danger">Before 3 hours</p>
-                  
                 </div>
                 <div>
                   <div>
-                    <Button variant="success">Active</Button>{" "}
+                    <Button variant="primary">Active</Button>{" "}
                     <p className="fs-5 fw-bolder">MD MAHFUZAR RAHMAN TAREK</p>
                   </div>
                   <div className="mt-4">
                     <h2 className="fs-5">Your Balance: </h2>
-                    <p className="fs-1 fw-bold text-success">$300</p>
+                    <p className="fs-1 fw-bold">$300</p>
                   </div>
 
                   <div className="mt-4">
                     <h2 className="fs-5">Active Status: </h2>
-                    <p className="fs-5 text-success">
+                    <p className="fs-5 text-primary">
                       Your 2 Times Meal Available (Guest Meal Allow)
                     </p>
                     <p className="fs-5 text-warning">
@@ -131,6 +133,26 @@ const Dashboard = () => {
                   <h2 className="icon-font text-success">
                     <GiTakeMyMoney />
                   </h2>
+                </div>
+              </div>
+              <div className="d-flex flex-column flex-lg-row justify-content-lg-between justify-content-center align-content-center gap-3">
+                <div className="w-100 w-lg-50 d-flex flex-column">
+                  <div className="bg-white p-2 mt-3 rounded-3">
+                  <h2 className="text-center fs-5 mt-3 fw-bolder">Order Status Distribution</h2>
+                  <OrderderedByStatus></OrderderedByStatus>
+                  </div>
+                  <div className="bg-white p-2 mt-3 rounded-3">
+                  <h2 className="text-center fs-5 mt-3 fw-bolder">Order By Payment Type and Source</h2>
+                  <OrderByPaymentTypeAndSource></OrderByPaymentTypeAndSource>
+                  </div>
+          
+                </div>
+                <div className="w-100 w-lg-50 mt-lg-0 mt-4 text-center">
+                  <div className="bg-white p-2 mt-3 rounded-3">
+                  <h2 className="text-center fs-5 mt-3 fw-bolder">Best Selling Items</h2>
+                  <BestSellingItems></BestSellingItems>
+                  </div>
+                  
                 </div>
               </div>
             </div>

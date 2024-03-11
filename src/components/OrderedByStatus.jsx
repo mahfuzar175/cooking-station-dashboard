@@ -1,11 +1,13 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 
 const data = [
-  { name: "Fill", value: 70, level: "Fill", color: "#FF6384" },
-  { name: "Available", value: 30, level: "Available", color: "#36A2EB" },
+  { name: "Delivary", value: 35, level: "Delivary", color: "#FF6384" },
+  { name: "New", value: 21, level: "New", color: "#36A2EB" },
+  { name: "On delivary", value: 25, level: "On delivary", color: "#0b9e2b" },
+  { name: "Canceller", value: 19, level: "Canceller", color: "#eb2337" },
 ];
 
-const PieChartComponent = () => (
+const OrderderedByStatus = () => (
   <ResponsiveContainer width="100%" height={300}>
     <PieChart>
       <Pie
@@ -31,4 +33,4 @@ const PieChartComponent = () => (
   </ResponsiveContainer>
 );
 
-export default PieChartComponent;
+export default OrderderedByStatus;
