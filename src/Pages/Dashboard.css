@@ -1,9 +1,28 @@
 .custom-margin {
     margin-top: 65px; /* Adjust the value as needed */
+    background-color: antiquewhite;
   }
 
   .left-background{
     background-color: rgb(4, 4, 24);
     position: fixed;
     width: 20%;
+  }
+
+  .padding-right-side {
+    padding-left: 0;
+    padding: 24px;
+  }
+  .icon-font{
+    font-size: 50px;
+    color: yellow;
+    padding: 5px;
+
+  }
+  
+  @media (min-width: 992px) {
+    .padding-right-side {
+      padding-left: 21%;
+      padding-right: 24px;
+    }
   }
