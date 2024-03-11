@@ -9,6 +9,7 @@ import { FaUserGroup } from "react-icons/fa6";
 import { FaBowlFood } from "react-icons/fa6";
 import OffCanvasNavBar from "../components/OffCanvasNavBar";
 import { GrLogout } from "react-icons/gr";
+import PieChartComponent from "../components/PieChartComponent";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -47,32 +48,47 @@ const Dashboard = () => {
         {/* Right side (takes remaining width) */}
         <div className="w-100 w-lg-75 padding-right-side min-vh-100">
           {activeTab === "dashboard" && (
-            <div className="d-flex flex-lg-row flex-column justify-content-center justify-content-lg-between">
-              <div>
-                <div className="mt-4">
-                  <h2 className="fs-5">Total Meals: 56</h2>
-                  <p className="fs-1 fw-bold text-success">$300</p>
+            <div>
+              <h2 className="text-center mb-3 fw-bold text-uppercase ">
+                Dashboard
+              </h2>
+              <div className="d-flex flex-lg-row flex-column justify-content-center justify-content-lg-between">
+                <div className="w-50 flex justify-content-center align-content-center">
+                  <PieChartComponent />
+                  <div className="mt-4 d-flex">
+                    <h2 className="fs-5 ">Total Meals: </h2>
+                    <p className="fs-5 fw-bold mx-2">54</p>
+                    
+                  </div>
+                  <div>
+                  <Button variant="success">My Meal Appoinment</Button>{" "}
+                  </div>
+                  <div className="mt-5">
+                  <Button variant="success">Emergency Guest Meal</Button>{" "}
+                  </div>
+                  <p className="text-danger">Before 3 hours</p>
+                  
                 </div>
-              </div>
-              <div>
                 <div>
-                  <Button variant="success">Active</Button>{" "}
-                  <p className="fs-5 fw-bolder">MD MAHFUZAR RAHMAN TAREK</p>
-                </div>
-                <div className="mt-4">
-                  <h2 className="fs-5">Your Balance: </h2>
-                  <p className="fs-1 fw-bold text-success">$300</p>
-                </div>
+                  <div>
+                    <Button variant="success">Active</Button>{" "}
+                    <p className="fs-5 fw-bolder">MD MAHFUZAR RAHMAN TAREK</p>
+                  </div>
+                  <div className="mt-4">
+                    <h2 className="fs-5">Your Balance: </h2>
+                    <p className="fs-1 fw-bold text-success">$300</p>
+                  </div>
 
-                <div className="mt-4">
-                  <h2 className="fs-5">Active Status: </h2>
-                  <p className="fs-5 text-success">
-                    Your 2 Times Meal Available (Guest Meal Allow)
-                  </p>
-                  <p className="fs-5 text-warning">
-                    Your 2 Times Meal Available (Guest Meal Allow)
-                  </p>
-                  <p className="fs-5 text-danger">Your Meal Off</p>
+                  <div className="mt-4">
+                    <h2 className="fs-5">Active Status: </h2>
+                    <p className="fs-5 text-success">
+                      Your 2 Times Meal Available (Guest Meal Allow)
+                    </p>
+                    <p className="fs-5 text-warning">
+                      Your 2 Times Meal Available (Guest Meal Allow)
+                    </p>
+                    <p className="fs-5 text-danger">Your Meal Off</p>
+                  </div>
                 </div>
               </div>
             </div>
