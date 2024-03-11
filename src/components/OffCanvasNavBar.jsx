@@ -16,7 +16,7 @@ const OffCanvasNavBar = ({ onTabClick }) => {
           className="bg-body-tertiary mb-3 fixed-top"
         >
           <Container fluid>
-            <Navbar.Brand className="fw-bold fs-3" href="#">
+            <Navbar.Brand className="fw-bold fs-3" href="/">
               Cooking Station
             </Navbar.Brand>
 

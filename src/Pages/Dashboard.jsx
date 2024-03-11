@@ -43,7 +43,7 @@ const Dashboard = () => {
             <span className="mx-2">Dashboard</span>
           </Nav.Link>
 
-          <Nav.Link className="mt-2" href="#logout">
+          <Nav.Link className="mt-2" href="/">
             <GrLogout className="mb-1" />
             <span className="mx-2">Sign out</span>
           </Nav.Link>
